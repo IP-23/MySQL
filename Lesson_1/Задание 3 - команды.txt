@@ -1,0 +1,15 @@
+Задание 3. Создайте дамп базы данных example из предыдущего задания, разверните 
+содержимое дампа в новую базу данных sample.
+
+Выполняемые команды:
+$ mysqldump -u root -p example > sample.sql
+Enter password: master
+$ mysql -u root -p
+Enter password: master
+mysql> CREATE DATABASE sample;
+mysql> USE sample;
+mysql> SOURCE sample.sql
+mysql> SHOW TABLES;
+_____________
+В результате в терминале была выведена таблица, содержащая таблицы базы даных sample
+(в нашем случае там содержится таблица users)
